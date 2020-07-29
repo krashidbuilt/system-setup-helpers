@@ -1,4 +1,8 @@
 #!/bin/bash
+# Good use to "suspend" the user if autologin is enabled
+# currently being used because docker won't load with the system daemon and requires user to login to kick off
+# haven't tried, but autologin can be enabled with: https://github.com/xfreebird/kcpassword
+
 cd "$(dirname "$0")"
 
 if [ "$EUID" -eq 0 ]; then
