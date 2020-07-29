@@ -25,6 +25,13 @@ NGROK_CONF_DIR=/usr/local/etc/ngrok
 
 if [[ ! -f "$NGROK_BINARY" ]]; then
     echo "$NGROK_BINARY binary doesn't exist."
+
+    # wget is used to grab the zip file
+    if [[ ! -f "/usr/local/bin/wget" ]]; then
+        echo "Installing wget with brew"
+        brew install wget
+    fi
+
     echo "Installing ngrok to ${NGROK_BINARY}"
     wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
     unzip ./ngrok-stable-darwin-amd64.zip
