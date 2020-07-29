@@ -6,8 +6,18 @@ if [ "$EUID" -e 0 ]; then
     exit
 fi
 
+LOCAL_AGENT_DIR=~/Library/LaunchAgents
+
+if [[ ! -d "$LOCAL_AGENT_DIR" ]]; then
+    echo "$LOCAL_AGENT_DIR directory doesn't exist."
+    echo "Creating directory ${LOCAL_AGENT_DIR}"
+    mkdir -p ${LOCAL_AGENT_DIR}
+else
+    echo "$LOCAL_AGENT_DIR directory exists."
+fi
+
 echo ""
 echo ""
-echo "Creating: com.krashidbuilt.user.suspend.onstartup.plist"
-\cp ./config/com.krashidbuilt.user.suspend.onstartup.plist ~/Library/LaunchAgents/com.krashidbuilt.user.suspend.onstartup.plist
-cat ~/Library/LaunchAgents/com.krashidbuilt.user.suspend.onstartup.plist
+echo "Adding: com.krashidbuilt.user.suspend.onstartup.plist"
+\cp ./config/com.krashidbuilt.user.suspend.onstartup.plist ${LOCAL_AGENT_DIR}/com.krashidbuilt.user.suspend.onstartup.plist
+cat ${LOCAL_AGENT_DIR}/com.krashidbuilt.user.suspend.onstartup.plist
