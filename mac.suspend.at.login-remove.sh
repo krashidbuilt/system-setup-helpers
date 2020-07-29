@@ -1,5 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+cat ./signature
 
 if [ "$EUID" -eq 0 ]; then
     echo "Please don't run as root"

@@ -1,5 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+cat ./signature
 
 echo "This isn't currently supported: https://stackoverflow.com/questions/42637339/how-to-start-docker-for-mac-daemon-on-boot"
 exit 1

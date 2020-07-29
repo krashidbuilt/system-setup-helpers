@@ -4,6 +4,7 @@
 # haven't tried, but autologin can be enabled with: https://github.com/xfreebird/kcpassword
 
 cd "$(dirname "$0")"
+cat ./signature
 
 if [ "$EUID" -eq 0 ]; then
     echo "Please don't run as root"

@@ -1,5 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+cat ./signature
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
