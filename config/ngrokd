@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/local/bin/ngrok start ssh -log=/var/log/ngrok.log -config=/usr/local/etc/ngrok/ngrok.yml
