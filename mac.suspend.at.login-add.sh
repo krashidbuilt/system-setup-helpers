@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
-if [ "$EUID" -e 0 ]; then
+if [ "$EUID" -eq 0 ]; then
     echo "Please don't run as root"
     exit
 fi
