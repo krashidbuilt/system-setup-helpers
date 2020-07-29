@@ -3,9 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.krashidbuilt.user.suspend.onstartup</string>
-        <key>Program</key>
-        <string>/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession</string>
+        <string>User suspend at auto login</string>
         <key>ProgramArguments</key>
         <array>
             <string>/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession</string>
