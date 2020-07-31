@@ -29,8 +29,8 @@ if [[ ! -f "$NGROK_BINARY" ]]; then
 
     # wget is used to grab the zip file
     if [[ ! -f "/usr/local/bin/wget" ]]; then
-        echo "Installing wget with brew"
-        brew install wget
+        echo "Unable to verify that wget is installed, we recommend installing it with brew \"brew install wget\""
+        exit 1
     fi
 
     echo "Installing ngrok to ${NGROK_BINARY}"
